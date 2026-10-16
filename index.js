@@ -5,18 +5,18 @@ const people = [
 ];
 
 const timer = (person) => {
-  setTimeout(() => {
-    console.log(person.name);
-  }, person.time);
+  console.log(person.name);
 };
 
 const antre = (person) => {
   return new Promise((resolve, reject) => {
     if (!person) return reject;
-    resolve(person);
+    setTimeout(() => {
+      resolve(person.name);
+    }, person.time);
   });
 };
 
 for (let i = 0; i < people.length; i++) {
-  antre(people[i]).then(timer).catch(console.log);
+  antre(people[i]).then(console.log).catch(console.log);
 }
