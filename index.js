@@ -4,10 +4,6 @@ const people = [
   { name: "Jane", time: 500 },
 ];
 
-const timer = (person) => {
-  console.log(person.name);
-};
-
 const antre = (person) => {
   return new Promise((resolve, reject) => {
     if (!person) return reject;
