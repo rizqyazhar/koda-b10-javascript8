@@ -13,6 +13,6 @@ const antre = (person) => {
   });
 };
 
-for (let i = 0; i < people.length; i++) {
-  antre(people[i]).then(console.log).catch(console.log);
-}
+const person1 = await antre(people[0]).then(console.log).catch(console.log);
+const person2 = await antre(people[1]).then(console.log).catch(console.log);
+const person3 = await antre(people[2]).then(console.log).catch(console.log);
