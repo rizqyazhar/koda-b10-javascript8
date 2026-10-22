@@ -1,7 +1,16 @@
 const people = [
-  { name: "John", time: 1500 },
-  { name: "Ed", time: 2000 },
-  { name: "Jane", time: 500 },
+  {
+    name: "John",
+    time: 1500,
+  },
+  {
+    name: "Ed",
+    time: 2000,
+  },
+  {
+    name: "Jane",
+    time: 500,
+  },
 ];
 
 const antre = (person) => {
