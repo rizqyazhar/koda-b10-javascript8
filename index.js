@@ -22,6 +22,20 @@ const antre = (person) => {
   });
 };
 
-const person1 = await antre(people[0]).then(console.log).catch(console.log);
-const person2 = await antre(people[1]).then(console.log).catch(console.log);
-const person3 = await antre(people[2]).then(console.log).catch(console.log);
+const person1 = people[0];
+const person2 = people[1];
+const person3 = people[2];
+
+antre(person1)
+  .then((person1) => {
+    console.log(person1);
+    return antre(person2);
+  })
+  .then((person2) => {
+    console.log(person2);
+    return antre(person3);
+  })
+  .then((person3) => {
+    console.log(person3);
+  })
+  .catch(console.log);
